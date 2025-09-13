@@ -103,6 +103,10 @@ The Grove Keeper Design System provides a growing collection of web components. 
 |-----------|-----|-------------|---------------|
 | **Button** | `<gk-button>` | Versatile button with multiple variants and sizes | [📖 Button README](lib/components/button/README.md) |
 | **Input Text** | `<gk-input-text>` | Text input with validation and accessibility features | [📖 Input Text README](lib/components/input-text/README.md) |
+| **Textarea** | `<gk-textarea>` | Multi-line text input with validation and accessibility features | [📖 Textarea README](lib/components/textarea/README.md) |
+| **Checkbox** | `<gk-checkbox>` | Checkbox input with custom styling and form integration | [📖 Checkbox README](lib/components/checkbox/README.md) |
+| **Radio** | `<gk-radio>` | Radio button input with group support and accessibility | [📖 Radio README](lib/components/radio/README.md) |
+| **Select** | `<gk-select>` | Dropdown select with dynamic options and form integration | [📖 Select README](lib/components/select/README.md) |
 
 ### Quick Component Examples
 
@@ -174,6 +178,136 @@ A flexible text input component with validation support.
 - `blur`: Fired when input loses focus
 
 > 📖 **For complete documentation, validation examples, and API reference, see the [Input Text Component README](lib/components/input-text/README.md)**
+
+#### Textarea (`gk-textarea`)
+
+A multi-line text input component with validation support.
+
+```html
+<!-- Basic usage -->
+<gk-textarea placeholder="Enter your message..."></gk-textarea>
+
+<!-- With validation -->
+<gk-textarea 
+  placeholder="Enter your feedback" 
+  required 
+  minlength="10"
+  maxlength="500"
+  rows="5">
+</gk-textarea>
+
+<!-- With sizes -->
+<gk-textarea size="small" placeholder="Small textarea"></gk-textarea>
+<gk-textarea size="large" placeholder="Large textarea"></gk-textarea>
+```
+
+**Key Attributes:**
+- `size`: `'small' | 'medium' | 'large'` (default: `'medium'`)
+- `disabled`: `boolean` (default: `false`)
+- `placeholder`: `string` (default: `''`)
+- `value`: `string` (default: `''`)
+- `required`: `boolean` (default: `false`)
+- `maxlength`: `number` (optional)
+- `minlength`: `number` (optional)
+- `rows`: `number` (optional)
+- `cols`: `number` (optional)
+
+> 📖 **For complete documentation, validation examples, and API reference, see the [Textarea Component README](lib/components/textarea/README.md)**
+
+#### Checkbox (`gk-checkbox`)
+
+A checkbox input component with custom styling and form integration.
+
+```html
+<!-- Basic usage -->
+<gk-checkbox>I agree to the terms</gk-checkbox>
+
+<!-- With form attributes -->
+<gk-checkbox 
+  name="newsletter" 
+  value="subscribe"
+  required>
+  Subscribe to newsletter
+</gk-checkbox>
+
+<!-- With sizes -->
+<gk-checkbox size="small">Small checkbox</gk-checkbox>
+<gk-checkbox size="large">Large checkbox</gk-checkbox>
+```
+
+**Key Attributes:**
+- `size`: `'small' | 'medium' | 'large'` (default: `'medium'`)
+- `disabled`: `boolean` (default: `false`)
+- `checked`: `boolean` (default: `false`)
+- `required`: `boolean` (default: `false`)
+- `name`: `string` (default: `''`)
+- `value`: `string` (default: `'on'`)
+
+> 📖 **For complete documentation, form integration examples, and API reference, see the [Checkbox Component README](lib/components/checkbox/README.md)**
+
+#### Radio (`gk-radio`)
+
+A radio button component with group support and accessibility features.
+
+```html
+<!-- Radio group -->
+<gk-radio name="color" value="red">Red</gk-radio>
+<gk-radio name="color" value="blue">Blue</gk-radio>
+<gk-radio name="color" value="green">Green</gk-radio>
+
+<!-- With form attributes -->
+<gk-radio 
+  name="gender" 
+  value="male"
+  required>
+  Male
+</gk-radio>
+```
+
+**Key Attributes:**
+- `size`: `'small' | 'medium' | 'large'` (default: `'medium'`)
+- `disabled`: `boolean` (default: `false`)
+- `checked`: `boolean` (default: `false`)
+- `required`: `boolean` (default: `false`)
+- `name`: `string` (default: `''`)
+- `value`: `string` (default: `''`)
+
+> 📖 **For complete documentation, radio group examples, and API reference, see the [Radio Component README](lib/components/radio/README.md)**
+
+#### Select (`gk-select`)
+
+A dropdown select component with dynamic options and form integration.
+
+```html
+<!-- Basic usage -->
+<gk-select>
+  <option value="">Choose an option...</option>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+</gk-select>
+
+<!-- With form attributes -->
+<gk-select 
+  name="country" 
+  required
+  size="large">
+  <option value="">Select your country...</option>
+  <option value="us">United States</option>
+  <option value="ca">Canada</option>
+  <option value="uk">United Kingdom</option>
+</gk-select>
+```
+
+**Key Attributes:**
+- `size`: `'small' | 'medium' | 'large'` (default: `'medium'`)
+- `disabled`: `boolean` (default: `false`)
+- `required`: `boolean` (default: `false`)
+- `name`: `string` (default: `''`)
+- `value`: `string` (default: `''`)
+- `multiple`: `boolean` (default: `false`)
+
+> 📖 **For complete documentation, dynamic options examples, and API reference, see the [Select Component README](lib/components/select/README.md)**
 
 ## 🎨 Theming
 
@@ -291,10 +425,10 @@ Then open [http://localhost:6006](http://localhost:6006) to view the documentati
 ## 📋 Roadmap
 
 ### Planned Components
-- [ ] Checkbox
-- [ ] Radio
-- [ ] Select/Dropdown
-- [ ] Textarea
+- [x] Checkbox
+- [x] Radio
+- [x] Select/Dropdown
+- [x] Textarea
 - [ ] Modal
 - [ ] Tooltip
 - [ ] Card
