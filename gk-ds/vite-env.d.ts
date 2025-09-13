@@ -6,10 +6,10 @@ declare module 'virtual:vite-plugin-cem/custom-elements-manifest' {
     modules: Array<{
       kind: string;
       path: string;
-      declarations: any[];
+      declarations: unknown[];
     }>;
   }
-  
+
   const customElementsManifest: CustomElementsManifest;
   export default customElementsManifest;
 }
