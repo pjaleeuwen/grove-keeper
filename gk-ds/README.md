@@ -95,7 +95,18 @@ function handleInput(event) {
 
 ## 🧩 Components
 
-### Button (`gk-button`)
+### Component Overview
+
+The Grove Keeper Design System provides a growing collection of web components. Each component is designed to be framework-agnostic, accessible, and highly customizable.
+
+| Component | Tag | Description | Documentation |
+|-----------|-----|-------------|---------------|
+| **Button** | `<gk-button>` | Versatile button with multiple variants and sizes | [📖 Button README](lib/components/button/README.md) |
+| **Input Text** | `<gk-input-text>` | Text input with validation and accessibility features | [📖 Input Text README](lib/components/input-text/README.md) |
+
+### Quick Component Examples
+
+#### Button (`gk-button`)
 
 A versatile button component with multiple variants and sizes.
 
@@ -117,13 +128,15 @@ A versatile button component with multiple variants and sizes.
 <gk-button type="submit">Submit</gk-button>
 ```
 
-**Attributes:**
+**Key Attributes:**
 - `variant`: `'primary' | 'secondary'` (default: `'primary'`)
 - `size`: `'small' | 'medium' | 'large'` (default: `'medium'`)
 - `disabled`: `boolean` (default: `false`)
 - `type`: `'button' | 'submit' | 'reset'` (default: `'button'`)
 
-### Input Text (`gk-input-text`)
+> 📖 **For complete documentation, examples, and API reference, see the [Button Component README](lib/components/button/README.md)**
+
+#### Input Text (`gk-input-text`)
 
 A flexible text input component with validation support.
 
@@ -144,7 +157,7 @@ A flexible text input component with validation support.
 <gk-input-text size="large" placeholder="Large input"></gk-input-text>
 ```
 
-**Attributes:**
+**Key Attributes:**
 - `size`: `'small' | 'medium' | 'large'` (default: `'medium'`)
 - `disabled`: `boolean` (default: `false`)
 - `placeholder`: `string` (default: `''`)
@@ -159,6 +172,8 @@ A flexible text input component with validation support.
 - `change`: Fired when value changes and loses focus (detail: `{ value: string }`)
 - `focus`: Fired when input receives focus
 - `blur`: Fired when input loses focus
+
+> 📖 **For complete documentation, validation examples, and API reference, see the [Input Text Component README](lib/components/input-text/README.md)**
 
 ## 🎨 Theming
 
