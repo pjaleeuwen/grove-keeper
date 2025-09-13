@@ -1,0 +1,43 @@
+{
+  "name": "gk-ds",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/gk-ds.umd.js",
+  "module": "./dist/gk-ds.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/gk-ds.es.js",
+      "require": "./dist/gk-ds.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^4.1.1",
+    "@storybook/addon-a11y": "^9.1.5",
+    "@storybook/addon-docs": "^9.1.5",
+    "@storybook/addon-vitest": "^9.1.5",
+    "@storybook/web-components-vite": "^9.1.5",
+    "@vitest/browser": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "custom-elements-manifest": "^2.1.0",
+    "lit": "^3.3.1",
+    "playwright": "^1.55.0",
+    "storybook": "^9.1.5",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "vitest": "^3.2.4",
+    "web-component-analyzer": "^2.0.0"
+  }
+}

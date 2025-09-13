@@ -1,0 +1,38 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "gk-button",
+      "path": "./lib/components/button/button.ts",
+      "description": "A versatile button component with multiple variants, sizes, and states.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The visual style variant of the button",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "description": "The size of the button",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "description": "Whether the button is disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "type",
+          "description": "The HTML button type",
+          "type": "string"
+        }
+      ],
+      "cssParts": [
+        {
+          "name": "button",
+          "description": "The internal button element"
+        }
+      ]
+    }
+  ]
+}
