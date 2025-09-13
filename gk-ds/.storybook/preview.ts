@@ -1,21 +1,21 @@
-import type { Preview } from '@storybook/web-components-vite'
-import { setCustomElementsManifest } from '@storybook/web-components'
+import type { Preview } from '@storybook/web-components-vite';
+import { setCustomElementsManifest } from '@storybook/web-components';
 
 // Import the custom elements manifest using the virtual import from vite-plugin-cem
-import customElementsManifest from 'virtual:vite-plugin-cem/custom-elements-manifest'
+import customElementsManifest from 'virtual:vite-plugin-cem/custom-elements-manifest';
 
 // Import all components to register them
-import '../lib'
+import '../lib';
 
 // Set the custom elements manifest for Storybook
-setCustomElementsManifest(customElementsManifest)
+setCustomElementsManifest(customElementsManifest);
 
 const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
 
@@ -23,8 +23,8 @@ const preview: Preview = {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
+      test: 'todo',
+    },
   },
 };
 

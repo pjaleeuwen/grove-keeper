@@ -22,9 +22,7 @@ A versatile button web component for the Grove Keeper Design System.
 ### With Attributes
 
 ```html
-<gk-button variant="primary" size="large" disabled>
-  Submit Form
-</gk-button>
+<gk-button variant="primary" size="large" disabled> Submit Form </gk-button>
 ```
 
 ### In JavaScript
@@ -47,20 +45,20 @@ document.body.appendChild(button);
 
 ### Attributes
 
-| Attribute | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `variant` | `'primary' \| 'secondary' \| 'outline' \| 'ghost'` | `'primary'` | Visual style variant |
-| `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | Button size |
-| `disabled` | `boolean` | `false` | Whether the button is disabled |
-| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | HTML button type |
+| Attribute  | Type                                               | Default     | Description                    |
+| ---------- | -------------------------------------------------- | ----------- | ------------------------------ |
+| `variant`  | `'primary' \| 'secondary' \| 'outline' \| 'ghost'` | `'primary'` | Visual style variant           |
+| `size`     | `'small' \| 'medium' \| 'large'`                   | `'medium'`  | Button size                    |
+| `disabled` | `boolean`                                          | `false`     | Whether the button is disabled |
+| `type`     | `'button' \| 'submit' \| 'reset'`                  | `'button'`  | HTML button type               |
 
 ### Methods
 
-| Method | Description |
-|--------|-------------|
+| Method    | Description                       |
+| --------- | --------------------------------- |
 | `focus()` | Programmatically focus the button |
-| `blur()` | Remove focus from the button |
-| `click()` | Programmatically trigger a click |
+| `blur()`  | Remove focus from the button      |
+| `click()` | Programmatically trigger a click  |
 
 ### Events
 

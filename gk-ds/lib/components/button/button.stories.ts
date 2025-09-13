@@ -43,7 +43,7 @@ const meta: Meta<ButtonArgs> = {
       description: 'The button content (HTML)',
     },
   },
-  render: (args) => {
+  render: args => {
     const button = document.createElement('gk-button');
     button.innerHTML = args.children || 'Button';
     if (args.variant) button.setAttribute('variant', args.variant);
@@ -58,8 +58,7 @@ export default meta;
 type Story = StoryObj<ButtonArgs>;
 
 // Default story
-export const Default: Story = {
-};
+export const Default: Story = {};
 
 // Variant stories
 export const Primary: Story = {
@@ -73,7 +72,6 @@ export const Secondary: Story = {
     variant: 'secondary',
   },
 };
-
 
 // Size stories
 export const Small: Story = {
@@ -112,7 +110,3 @@ export const Reset: Story = {
     type: 'reset',
   },
 };
-
-
-
-

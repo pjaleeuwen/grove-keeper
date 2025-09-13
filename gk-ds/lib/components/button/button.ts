@@ -90,62 +90,61 @@ const template = `
 `;
 
 export class GkButton extends HTMLElement {
-  private shadow: ShadowRoot
-  private button!: HTMLButtonElement
+  private shadow: ShadowRoot;
+  private button!: HTMLButtonElement;
 
   constructor() {
-    super()
-    this.shadow = this.attachShadow({ mode: 'open' })
-    this.shadow.innerHTML = template
-    this.button = this.shadow.querySelector('button')!
+    super();
+    this.shadow = this.attachShadow({ mode: 'open' });
+    this.shadow.innerHTML = template;
+    this.button = this.shadow.querySelector('button')!;
   }
 
   static get observedAttributes() {
-    return ['variant', 'size', 'disabled', 'type']
+    return ['variant', 'size', 'disabled', 'type'];
   }
 
   connectedCallback() {
-    this.render()
+    this.render();
   }
 
   attributeChangedCallback(_name: string, oldValue: string, newValue: string) {
     if (oldValue !== newValue) {
-      this.updateButton()
+      this.updateButton();
     }
   }
 
-
   private render() {
-    this.updateButton()
+    this.updateButton();
   }
 
   private updateButton() {
-    const variant = this.getAttribute('variant') || 'primary'
-    const size = this.getAttribute('size') || 'medium'
-    const disabled = this.hasAttribute('disabled')
-    const type = this.getAttribute('type') || 'button'
+    const variant = this.getAttribute('variant') || 'primary';
+    const size = this.getAttribute('size') || 'medium';
+    const disabled = this.hasAttribute('disabled');
+    const type = this.getAttribute('type') || 'button';
 
-    this.button.setAttribute('variant', variant)
-    this.button.setAttribute('size', size)
-    this.button.type = type as 'button' | 'submit' | 'reset'
-    this.button.disabled = disabled
+    this.button.setAttribute('variant', variant);
+    this.button.setAttribute('size', size);
+    this.button.type = type as 'button' | 'submit' | 'reset';
+    this.button.disabled = disabled;
   }
 
   // Public methods
   public focus() {
-    this.button.focus()
+    this.button.focus();
   }
 
   public blur() {
-    this.button.blur()
+    this.button.blur();
   }
 
   public click() {
-    this.button.click()
+    this.button.click();
   }
 }
 
 // Register the custom element
 if (!customElements.get('gk-button')) {
-  customElements.define('gk-button', GkButton)
+  customElements.define('gk-button', GkButton);
 }
