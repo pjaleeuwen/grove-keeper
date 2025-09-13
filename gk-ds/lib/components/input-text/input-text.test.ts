@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import './input-text'; // This will register the custom element
+import type { GkInputText } from './input-text';
 
 describe('GkInputText', () => {
   let input: HTMLElement;
@@ -77,20 +78,20 @@ describe('GkInputText', () => {
 
   describe('Properties', () => {
     it('should work with value property', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       gkInput.value = 'test value';
       expect(gkInput.value).toBe('test value');
     });
 
     it('should update internal input value when property is set', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       gkInput.value = 'property value';
       const inputElement = input.shadowRoot?.querySelector('input');
       expect(inputElement?.value).toBe('property value');
     });
 
     it('should update attribute when value property is set', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       gkInput.value = 'property value';
       expect(input.getAttribute('value')).toBe('property value');
     });
@@ -148,9 +149,9 @@ describe('GkInputText', () => {
 
   describe('Events', () => {
     it('should dispatch input events', async () => {
-      const inputPromise = new Promise<any>(resolve => {
+      const inputPromise = new Promise<CustomEvent>(resolve => {
         input.addEventListener('input', (e) => {
-          resolve(e);
+          resolve(e as CustomEvent);
         });
       });
 
@@ -162,9 +163,9 @@ describe('GkInputText', () => {
     });
 
     it('should dispatch change events', async () => {
-      const changePromise = new Promise<any>(resolve => {
+      const changePromise = new Promise<CustomEvent>(resolve => {
         input.addEventListener('change', (e) => {
-          resolve(e);
+          resolve(e as CustomEvent);
         });
       });
 
@@ -204,46 +205,46 @@ describe('GkInputText', () => {
 
   describe('Public Methods', () => {
     it('should have focus method', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       expect(typeof gkInput.focus).toBe('function');
     });
 
     it('should have blur method', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       expect(typeof gkInput.blur).toBe('function');
     });
 
     it('should have select method', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       expect(typeof gkInput.select).toBe('function');
     });
 
     it('should have validity property', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       expect(gkInput.validity).toBeDefined();
     });
 
     it('should have checkValidity method', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       expect(typeof gkInput.checkValidity).toBe('function');
     });
 
     it('should have reportValidity method', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       expect(typeof gkInput.reportValidity).toBe('function');
     });
   });
 
   describe('Focus Management', () => {
     it('should focus internal input when focus is called', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       
       gkInput.focus();
       expect(document.activeElement).toBe(input);
     });
 
     it('should blur internal input when blur is called', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       
       gkInput.focus();
       gkInput.blur();
@@ -254,24 +255,24 @@ describe('GkInputText', () => {
 
   describe('Validation', () => {
     it('should check validity', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       expect(gkInput.checkValidity()).toBe(true);
     });
 
     it('should report validity', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       expect(gkInput.reportValidity()).toBe(true);
     });
 
     it('should validate required field', () => {
       input.setAttribute('required', '');
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       expect(gkInput.checkValidity()).toBe(false);
     });
 
     it('should validate minlength', () => {
       input.setAttribute('minlength', '5');
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       gkInput.value = 'abc'; // Less than 5 characters
       // Check that the minlength attribute is properly set on the internal input
       const inputElement = input.shadowRoot?.querySelector('input');
@@ -281,7 +282,7 @@ describe('GkInputText', () => {
 
     it('should validate maxlength', () => {
       input.setAttribute('maxlength', '5');
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       gkInput.value = 'abcdef'; // More than 5 characters
       // Check that the maxlength attribute is properly set on the internal input
       const inputElement = input.shadowRoot?.querySelector('input');
@@ -303,7 +304,7 @@ describe('GkInputText', () => {
     });
 
     it('should handle empty values', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       gkInput.value = '';
       expect(gkInput.value).toBe('');
     });
@@ -328,14 +329,14 @@ describe('GkInputText', () => {
 
   describe('Accessibility', () => {
     it('should be focusable when not disabled', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       gkInput.focus();
       expect(document.activeElement).toBe(input);
     });
 
     it('should not be focusable when disabled', () => {
       input.setAttribute('disabled', '');
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       gkInput.focus();
       // In jsdom, disabled elements can still be focused, so we check the disabled state
       expect(input.hasAttribute('disabled')).toBe(true);
@@ -347,7 +348,7 @@ describe('GkInputText', () => {
     });
 
     it('should support keyboard navigation', () => {
-      const gkInput = input as any;
+      const gkInput = input as GkInputText;
       gkInput.focus();
       expect(document.activeElement).toBe(input);
     });

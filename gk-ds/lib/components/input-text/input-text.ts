@@ -166,7 +166,7 @@ export class GkInputText extends HTMLElement {
   }
 
   private setupEventListeners() {
-    this.input.addEventListener('input', (_e) => {
+    this.input.addEventListener('input', () => {
       this.dispatchEvent(new CustomEvent('input', {
         detail: { value: this.input.value },
         bubbles: true,
@@ -174,7 +174,7 @@ export class GkInputText extends HTMLElement {
       }));
     });
 
-    this.input.addEventListener('change', (_e) => {
+    this.input.addEventListener('change', () => {
       this.dispatchEvent(new CustomEvent('change', {
         detail: { value: this.input.value },
         bubbles: true,
@@ -182,14 +182,14 @@ export class GkInputText extends HTMLElement {
       }));
     });
 
-    this.input.addEventListener('focus', (_e) => {
+    this.input.addEventListener('focus', () => {
       this.dispatchEvent(new CustomEvent('focus', {
         bubbles: true,
         composed: true
       }));
     });
 
-    this.input.addEventListener('blur', (_e) => {
+    this.input.addEventListener('blur', () => {
       this.dispatchEvent(new CustomEvent('blur', {
         bubbles: true,
         composed: true
