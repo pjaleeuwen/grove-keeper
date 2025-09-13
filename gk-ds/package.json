@@ -12,6 +12,7 @@
       "require": "./dist/gk-ds.umd.js"
     }
   },
+  "customElements": "./dist/custom-elements.json",
   "files": [
     "dist"
   ],
