@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import path from 'path';
@@ -26,5 +27,10 @@ export default defineConfig({
         globals: {},
       },
     },
+  },
+  test: {
+    include: ['lib/**/*.test.ts'],
+    environment: 'jsdom',
+    setupFiles: ['./vitest.setup.ts'],
   },
 });

@@ -21,6 +21,7 @@ export default [
         HTMLButtonElement: 'readonly',
         customElements: 'readonly',
         console: 'readonly',
+        KeyboardEvent: 'readonly',
         // Node globals
         process: 'readonly',
         Buffer: 'readonly',
