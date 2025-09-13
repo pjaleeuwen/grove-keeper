@@ -285,17 +285,45 @@ describe('GkRadio', () => {
       expect(radio2.checked).toBe(false);
       expect(radio3.checked).toBe(false);
 
-      // Check second radio - manually uncheck first (radio group behavior)
-      radio1.checked = false;
+      // Check second radio - should automatically uncheck first
       radio2.checked = true;
       expect(radio1.checked).toBe(false);
       expect(radio2.checked).toBe(true);
       expect(radio3.checked).toBe(false);
 
+      // Check third radio - should automatically uncheck second
+      radio3.checked = true;
+      expect(radio1.checked).toBe(false);
+      expect(radio2.checked).toBe(false);
+      expect(radio3.checked).toBe(true);
+
       // Clean up
       document.body.removeChild(radio1);
       document.body.removeChild(radio2);
       document.body.removeChild(radio3);
+    });
+
+    it('should not affect radios with different names', () => {
+      const radio1 = document.createElement('gk-radio') as GkRadio;
+      const radio2 = document.createElement('gk-radio') as GkRadio;
+
+      radio1.setAttribute('name', 'group1');
+      radio1.setAttribute('value', 'option1');
+      radio2.setAttribute('name', 'group2');
+      radio2.setAttribute('value', 'option2');
+
+      document.body.appendChild(radio1);
+      document.body.appendChild(radio2);
+
+      // Check both radios - they should both stay checked since they have different names
+      radio1.checked = true;
+      radio2.checked = true;
+      expect(radio1.checked).toBe(true);
+      expect(radio2.checked).toBe(true);
+
+      // Clean up
+      document.body.removeChild(radio1);
+      document.body.removeChild(radio2);
     });
   });
 

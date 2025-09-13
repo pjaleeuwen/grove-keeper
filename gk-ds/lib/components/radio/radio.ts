@@ -210,6 +210,10 @@ export class GkRadio extends HTMLElement {
 
   private setupEventListeners() {
     this.input.addEventListener('change', () => {
+      if (this.input.checked) {
+        this.uncheckOtherRadiosInGroup();
+      }
+      
       this.dispatchEvent(new CustomEvent('change', {
         detail: { 
           checked: this.input.checked,
@@ -235,6 +239,19 @@ export class GkRadio extends HTMLElement {
     });
   }
 
+  private uncheckOtherRadiosInGroup() {
+    const name = this.input.name;
+    if (!name) return;
+
+    // Find all other radio buttons in the same group
+    const allRadios = document.querySelectorAll(`gk-radio[name="${name}"]`);
+    allRadios.forEach(radio => {
+      if (radio !== this) {
+        (radio as GkRadio).checked = false;
+      }
+    });
+  }
+
   // Public methods
   public focus() {
     this.input.focus();
@@ -256,6 +273,7 @@ export class GkRadio extends HTMLElement {
     this.input.checked = val;
     if (val) {
       this.setAttribute('checked', '');
+      this.uncheckOtherRadiosInGroup();
     } else {
       this.removeAttribute('checked');
     }

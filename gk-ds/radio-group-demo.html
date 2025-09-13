@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Group Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Radio Group Behavior Demo</h1>
+    <p>This demo shows how radio buttons with the same name automatically form groups where only one can be selected at a time.</p>
+
+    <fieldset>
+        <legend>Choose your favorite color:</legend>
+        <div class="radio-group">
+            <label>
+                <gk-radio name="color" value="red"></gk-radio>
+                Red
+            </label>
+            <label>
+                <gk-radio name="color" value="blue"></gk-radio>
+                Blue
+            </label>
+            <label>
+                <gk-radio name="color" value="green"></gk-radio>
+                Green
+            </label>
+            <label>
+                <gk-radio name="color" value="yellow"></gk-radio>
+                Yellow
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Choose your size:</legend>
+        <div class="radio-group">
+            <label>
+                <gk-radio name="size" value="small"></gk-radio>
+                Small
+            </label>
+            <label>
+                <gk-radio name="size" value="medium"></gk-radio>
+                Medium
+            </label>
+            <label>
+                <gk-radio name="size" value="large"></gk-radio>
+                Large
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Choose your gender:</legend>
+        <div class="radio-group">
+            <label>
+                <gk-radio name="gender" value="male"></gk-radio>
+                Male
+            </label>
+            <label>
+                <gk-radio name="gender" value="female"></gk-radio>
+                Female
+            </label>
+            <label>
+                <gk-radio name="gender" value="other"></gk-radio>
+                Other
+            </label>
+            <label>
+                <gk-radio name="gender" value="prefer-not-to-say"></gk-radio>
+                Prefer not to say
+            </label>
+        </div>
+    </fieldset>
+
+    <div class="result">
+        <h3>Selected Values:</h3>
+        <p>Color: <span id="color-result">None</span></p>
+        <p>Size: <span id="size-result">None</span></p>
+        <p>Gender: <span id="gender-result">None</span></p>
+    </div>
+
+    <script type="module">
+        // Import the components
+        import './lib/components/radio/radio.js';
+
+        // Listen for changes and update the display
+        function updateDisplay() {
+            const colorRadios = document.querySelectorAll('gk-radio[name="color"]');
+            const sizeRadios = document.querySelectorAll('gk-radio[name="size"]');
+            const genderRadios = document.querySelectorAll('gk-radio[name="gender"]');
+
+            const colorResult = document.getElementById('color-result');
+            const sizeResult = document.getElementById('size-result');
+            const genderResult = document.getElementById('gender-result');
+
+            // Find selected color
+            const selectedColor = Array.from(colorRadios).find(radio => radio.checked);
+            colorResult.textContent = selectedColor ? selectedColor.value : 'None';
+
+            // Find selected size
+            const selectedSize = Array.from(sizeRadios).find(radio => radio.checked);
+            sizeResult.textContent = selectedSize ? selectedSize.value : 'None';
+
+            // Find selected gender
+            const selectedGender = Array.from(genderRadios).find(radio => radio.checked);
+            genderResult.textContent = selectedGender ? selectedGender.value : 'None';
+        }
+
+        // Add event listeners to all radio buttons
+        document.addEventListener('change', (e) => {
+            if (e.target.tagName === 'GK-RADIO') {
+                updateDisplay();
+            }
+        });
+
+        // Initial display update
+        updateDisplay();
+    </script>
+</body>
+</html>

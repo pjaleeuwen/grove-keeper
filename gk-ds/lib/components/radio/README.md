@@ -6,6 +6,7 @@ A versatile and accessible radio button web component for the Grove Keeper Desig
 
 - **📏 Flexible Sizing**: Small, Medium, and Large sizes
 - **✅ Form Integration**: Full HTML form support with name/value attributes
+- **🔗 Radio Group Behavior**: Automatic mutual exclusion within groups (same name)
 - **♿ Accessibility**: WCAG 2.1 compliant with full keyboard navigation
 - **🌙 Dark Mode**: Automatic theme detection with `prefers-color-scheme`
 - **🎯 Focus Management**: Proper focus indicators and management
@@ -226,6 +227,8 @@ The radio button emits custom events that bubble up:
 
 ### Radio Groups
 
+Radio buttons with the same `name` attribute automatically form a group where only one can be selected at a time. When you select one radio button, all others in the same group are automatically unselected.
+
 ```html
 <!-- Color selection -->
 <fieldset>
@@ -245,6 +248,21 @@ The radio button emits custom events that bubble up:
   <gk-radio name="gender" value="female">Female</gk-radio>
   <gk-radio name="gender" value="other">Other</gk-radio>
   <gk-radio name="gender" value="prefer-not-to-say">Prefer not to say</gk-radio>
+</fieldset>
+
+<!-- Multiple independent groups -->
+<fieldset>
+  <legend>Size:</legend>
+  <gk-radio name="size" value="small">Small</gk-radio>
+  <gk-radio name="size" value="medium">Medium</gk-radio>
+  <gk-radio name="size" value="large">Large</gk-radio>
+</fieldset>
+
+<fieldset>
+  <legend>Color:</legend>
+  <gk-radio name="color" value="red">Red</gk-radio>
+  <gk-radio name="color" value="blue">Blue</gk-radio>
+  <gk-radio name="color" value="green">Green</gk-radio>
 </fieldset>
 ```
 
