@@ -117,36 +117,6 @@ const styles = `
     font-size: 16px;
   }
 
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
-    input[type="radio"] {
-      background-color: #1f2937;
-      border-color: #374151;
-    }
-
-    input[type="radio"]:checked {
-      background-color: #646cff;
-      border-color: #646cff;
-    }
-
-    input[type="radio"]:disabled {
-      background-color: #111827;
-      border-color: #374151;
-    }
-
-    input[type="radio"]:disabled:checked {
-      background-color: #374151;
-      border-color: #374151;
-    }
-
-    .radio-label {
-      color: #f9fafb;
-    }
-
-    input[type="radio"]:disabled + .radio-label {
-      color: #6b7280;
-    }
-  }
 `;
 
 const template = `

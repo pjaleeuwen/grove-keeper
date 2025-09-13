@@ -8,7 +8,6 @@ A versatile and accessible radio button web component for the Grove Keeper Desig
 - **✅ Form Integration**: Full HTML form support with name/value attributes
 - **🔗 Radio Group Behavior**: Automatic mutual exclusion within groups (same name)
 - **♿ Accessibility**: WCAG 2.1 compliant with full keyboard navigation
-- **🌙 Dark Mode**: Automatic theme detection with `prefers-color-scheme`
 - **🎯 Focus Management**: Proper focus indicators and management
 - **🔧 TypeScript**: Full type definitions and IntelliSense support
 - **🎭 Shadow DOM**: Style encapsulation and isolation
@@ -465,20 +464,6 @@ The radio component supports theming through CSS custom properties:
 }
 ```
 
-### Dark Mode Support
-
-```css
-@media (prefers-color-scheme: dark) {
-  :root {
-    --gk-radio-bg: #1f2937;
-    --gk-radio-border: #374151;
-    --gk-radio-disabled-bg: #111827;
-    --gk-radio-disabled-border: #374151;
-    --gk-radio-label-color: #f9fafb;
-    --gk-radio-label-disabled-color: #6b7280;
-  }
-}
-```
 
 ## ♿ Accessibility
 

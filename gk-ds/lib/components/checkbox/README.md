@@ -7,7 +7,6 @@ A versatile and accessible checkbox web component for the Grove Keeper Design Sy
 - **📏 Flexible Sizing**: Small, Medium, and Large sizes
 - **✅ Form Integration**: Full HTML form support with name/value attributes
 - **♿ Accessibility**: WCAG 2.1 compliant with full keyboard navigation
-- **🌙 Dark Mode**: Automatic theme detection with `prefers-color-scheme`
 - **🎯 Focus Management**: Proper focus indicators and management
 - **🔧 TypeScript**: Full type definitions and IntelliSense support
 - **🎭 Shadow DOM**: Style encapsulation and isolation
@@ -389,20 +388,6 @@ The checkbox component supports theming through CSS custom properties:
 }
 ```
 
-### Dark Mode Support
-
-```css
-@media (prefers-color-scheme: dark) {
-  :root {
-    --gk-checkbox-bg: #1f2937;
-    --gk-checkbox-border: #374151;
-    --gk-checkbox-disabled-bg: #111827;
-    --gk-checkbox-disabled-border: #374151;
-    --gk-checkbox-label-color: #f9fafb;
-    --gk-checkbox-label-disabled-color: #6b7280;
-  }
-}
-```
 
 ## ♿ Accessibility
 

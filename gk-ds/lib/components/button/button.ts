@@ -76,10 +76,6 @@ const styles = `
     min-height: 44px;
   }
 
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
-    /* Dark mode styles can be added here for remaining variants */
-  }
 `;
 
 const template = `

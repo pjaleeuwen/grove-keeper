@@ -6,7 +6,6 @@ A modern, accessible web component library built with TypeScript and Shadow DOM.
 
 - **🌐 Framework Agnostic**: Works with any framework or vanilla JavaScript
 - **🎨 Modern Design**: Clean, accessible, and responsive components
-- **🌙 Dark Mode**: Automatic dark mode support with `prefers-color-scheme`
 - **♿ Accessible**: WCAG 2.1 compliant with full keyboard navigation
 - **📱 Responsive**: Mobile-first design with flexible layouts
 - **🔧 TypeScript**: Full type definitions included

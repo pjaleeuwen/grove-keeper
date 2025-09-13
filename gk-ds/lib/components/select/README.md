@@ -7,7 +7,6 @@ A powerful and accessible select dropdown web component for the Grove Keeper Des
 - **📏 Flexible Sizing**: Small, Medium, and Large sizes
 - **✅ Form Integration**: Full HTML form support with name/value attributes
 - **♿ Accessibility**: WCAG 2.1 compliant with full keyboard navigation
-- **🌙 Dark Mode**: Automatic theme detection with `prefers-color-scheme`
 - **🎯 Focus Management**: Proper focus indicators and management
 - **🔧 TypeScript**: Full type definitions and IntelliSense support
 - **🎭 Shadow DOM**: Style encapsulation and isolation
@@ -473,20 +472,6 @@ The select component supports theming through CSS custom properties:
 }
 ```
 
-### Dark Mode Support
-
-```css
-@media (prefers-color-scheme: dark) {
-  :root {
-    --gk-select-bg: #1f2937;
-    --gk-select-text: #f9fafb;
-    --gk-select-border: #374151;
-    --gk-select-disabled-bg: #111827;
-    --gk-select-disabled-text: #6b7280;
-    --gk-select-arrow: #9ca3af;
-  }
-}
-```
 
 ## ♿ Accessibility
 

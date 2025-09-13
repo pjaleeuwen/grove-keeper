@@ -7,7 +7,6 @@ A powerful and accessible textarea web component for the Grove Keeper Design Sys
 - **📏 Flexible Sizing**: Small, Medium, and Large sizes
 - **✅ Built-in Validation**: Required, Min/Max Length support
 - **♿ Accessibility**: WCAG 2.1 compliant with full keyboard navigation
-- **🌙 Dark Mode**: Automatic theme detection with `prefers-color-scheme`
 - **🎯 Focus Management**: Proper focus indicators and management
 - **🔧 TypeScript**: Full type definitions and IntelliSense support
 - **🎭 Shadow DOM**: Style encapsulation and isolation
@@ -391,20 +390,6 @@ The textarea component supports theming through CSS custom properties:
 }
 ```
 
-### Dark Mode Support
-
-```css
-@media (prefers-color-scheme: dark) {
-  :root {
-    --gk-textarea-bg: #1f2937;
-    --gk-textarea-text: #f9fafb;
-    --gk-textarea-border: #374151;
-    --gk-textarea-placeholder: #6b7280;
-    --gk-textarea-disabled-bg: #111827;
-    --gk-textarea-disabled-text: #6b7280;
-  }
-}
-```
 
 ## ♿ Accessibility
 

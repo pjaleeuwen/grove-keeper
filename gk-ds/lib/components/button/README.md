@@ -8,7 +8,6 @@ A versatile and accessible button web component for the Grove Keeper Design Syst
 - **📏 Flexible Sizing**: Small, Medium, and Large sizes
 - **🔘 Button Types**: Button, Submit, and Reset functionality
 - **♿ Accessibility**: WCAG 2.1 compliant with full keyboard navigation
-- **🌙 Dark Mode**: Automatic theme detection with `prefers-color-scheme`
 - **🎯 Focus Management**: Proper focus indicators and management
 - **🔧 TypeScript**: Full type definitions and IntelliSense support
 - **🎭 Shadow DOM**: Style encapsulation and isolation
@@ -264,13 +263,6 @@ Since the button uses Shadow DOM, styles are encapsulated. However, you can cust
   --gk-button-border-radius: 12px;
 }
 
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --gk-button-primary-bg: #4caf50;
-    --gk-button-primary-hover: #45a049;
-  }
-}
 ```
 
 ## ♿ Accessibility

@@ -7,7 +7,6 @@ A powerful and accessible text input web component for the Grove Keeper Design S
 - **📏 Flexible Sizing**: Small, Medium, and Large sizes
 - **✅ Built-in Validation**: Required, Min/Max Length, Pattern matching
 - **♿ Accessibility**: WCAG 2.1 compliant with full keyboard navigation
-- **🌙 Dark Mode**: Automatic theme detection with `prefers-color-scheme`
 - **🎯 Focus Management**: Proper focus indicators and management
 - **🔧 TypeScript**: Full type definitions and IntelliSense support
 - **🎭 Shadow DOM**: Style encapsulation and isolation
@@ -381,20 +380,6 @@ The input component supports theming through CSS custom properties:
 }
 ```
 
-### Dark Mode Support
-
-```css
-@media (prefers-color-scheme: dark) {
-  :root {
-    --gk-input-bg: #1f2937;
-    --gk-input-text: #f9fafb;
-    --gk-input-border: #374151;
-    --gk-input-placeholder: #6b7280;
-    --gk-input-disabled-bg: #111827;
-    --gk-input-disabled-text: #6b7280;
-  }
-}
-```
 
 ## ♿ Accessibility
 

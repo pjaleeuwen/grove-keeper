@@ -71,28 +71,6 @@ const styles = `
     min-height: 100px;
   }
 
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
-    textarea {
-      background-color: #1f2937;
-      color: #f9fafb;
-      border-color: #374151;
-    }
-
-    textarea:focus {
-      border-color: #646cff;
-    }
-
-    textarea:disabled {
-      background-color: #111827;
-      color: #6b7280;
-      border-color: #374151;
-    }
-
-    textarea::placeholder {
-      color: #6b7280;
-    }
-  }
 `;
 
 const template = `

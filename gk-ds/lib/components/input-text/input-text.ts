@@ -69,28 +69,6 @@ const styles = `
     min-height: 44px;
   }
 
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
-    input {
-      background-color: #1f2937;
-      color: #f9fafb;
-      border-color: #374151;
-    }
-
-    input:focus {
-      border-color: #646cff;
-    }
-
-    input:disabled {
-      background-color: #111827;
-      color: #6b7280;
-      border-color: #374151;
-    }
-
-    input::placeholder {
-      color: #6b7280;
-    }
-  }
 `;
 
 const template = `

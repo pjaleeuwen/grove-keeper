@@ -102,28 +102,6 @@ const styles = `
     border-top-width: 5px;
   }
 
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
-    select {
-      background-color: #1f2937;
-      color: #f9fafb;
-      border-color: #374151;
-    }
-
-    select:focus {
-      border-color: #646cff;
-    }
-
-    select:disabled {
-      background-color: #111827;
-      color: #6b7280;
-      border-color: #374151;
-    }
-
-    .select-container::after {
-      border-top-color: #9ca3af;
-    }
-  }
 `;
 
 const template = `

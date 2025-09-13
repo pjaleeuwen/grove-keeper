@@ -121,36 +121,6 @@ const styles = `
     font-size: 16px;
   }
 
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
-    input[type="checkbox"] {
-      background-color: #1f2937;
-      border-color: #374151;
-    }
-
-    input[type="checkbox"]:checked {
-      background-color: #646cff;
-      border-color: #646cff;
-    }
-
-    input[type="checkbox"]:disabled {
-      background-color: #111827;
-      border-color: #374151;
-    }
-
-    input[type="checkbox"]:disabled:checked {
-      background-color: #374151;
-      border-color: #374151;
-    }
-
-    .checkbox-label {
-      color: #f9fafb;
-    }
-
-    input[type="checkbox"]:disabled + .checkbox-label {
-      color: #6b7280;
-    }
-  }
 `;
 
 const template = `
