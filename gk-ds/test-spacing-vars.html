@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Spacing Variables Test</title>
+    <link rel="stylesheet" href="./dist/gk-ds.css">
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        margin: var(--gk-spacing-xl, 16px);
+        background-color: var(--gk-color-bg-primary);
+        color: var(--gk-color-text-primary);
+        line-height: var(--gk-line-height-normal, 1.5);
+      }
+      
+      .test-section {
+        margin-bottom: var(--gk-spacing-2xl, 20px);
+        padding: var(--gk-spacing-xl, 16px);
+        border: 1px solid var(--gk-color-border-default);
+        border-radius: var(--gk-radius-md, 6px);
+        background-color: var(--gk-color-bg-secondary);
+      }
+      
+      .spacing-demo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gk-spacing-gap-sm, 8px);
+        margin: var(--gk-spacing-lg, 12px) 0;
+      }
+      
+      .spacing-box {
+        padding: var(--gk-spacing-md, 8px);
+        background-color: var(--gk-color-primary);
+        color: var(--gk-color-text-inverse);
+        border-radius: var(--gk-radius-sm, 4px);
+        font-size: var(--gk-font-size-xs, 12px);
+        text-align: center;
+        min-width: var(--gk-spacing-2xl, 20px);
+      }
+      
+      .component-demo {
+        margin: var(--gk-spacing-lg, 12px) 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gk-spacing-gap-md, 12px);
+        align-items: center;
+      }
+      
+      .size-demo {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--gk-spacing-gap-lg, 16px);
+        margin: var(--gk-spacing-lg, 12px) 0;
+      }
+      
+      .size-item {
+        padding: var(--gk-spacing-md, 8px);
+        border: 1px solid var(--gk-color-border-default);
+        border-radius: var(--gk-radius-md, 6px);
+        background-color: var(--gk-color-bg-primary);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grove Keeper Design System - Spacing Variables Test</h1>
+    <p>This page demonstrates that all spacing variables are working correctly.</p>
+    
+    <div class="test-section">
+      <h2>Spacing Scale Demo</h2>
+      <p>These boxes demonstrate the spacing scale from xs to 2xl:</p>
+      <div class="spacing-demo">
+        <div class="spacing-box" style="padding: var(--gk-spacing-xs, 4px);">XS</div>
+        <div class="spacing-box" style="padding: var(--gk-spacing-sm, 6px);">SM</div>
+        <div class="spacing-box" style="padding: var(--gk-spacing-md, 8px);">MD</div>
+        <div class="spacing-box" style="padding: var(--gk-spacing-lg, 12px);">LG</div>
+        <div class="spacing-box" style="padding: var(--gk-spacing-xl, 16px);">XL</div>
+        <div class="spacing-box" style="padding: var(--gk-spacing-2xl, 20px);">2XL</div>
+        <div class="spacing-box" style="padding: var(--gk-spacing-3xl, 24px);">3XL</div>
+      </div>
+    </div>
+    
+    <div class="test-section">
+      <h2>Component Sizes Demo</h2>
+      <p>These components use the spacing variables for sizing:</p>
+      <div class="component-demo">
+        <gk-button size="small">Small</gk-button>
+        <gk-button size="medium">Medium</gk-button>
+        <gk-button size="large">Large</gk-button>
+      </div>
+      <div class="component-demo">
+        <gk-input-text size="small" placeholder="Small input" style="width: 150px;"></gk-input-text>
+        <gk-input-text size="medium" placeholder="Medium input" style="width: 150px;"></gk-input-text>
+        <gk-input-text size="large" placeholder="Large input" style="width: 150px;"></gk-input-text>
+      </div>
+    </div>
+    
+    <div class="test-section">
+      <h2>Border Radius Demo</h2>
+      <p>These elements demonstrate different border radius values:</p>
+      <div class="spacing-demo">
+        <div style="padding: var(--gk-spacing-lg, 12px); background-color: var(--gk-color-primary); color: var(--gk-color-text-inverse); border-radius: var(--gk-radius-sm, 4px);">Small Radius</div>
+        <div style="padding: var(--gk-spacing-lg, 12px); background-color: var(--gk-color-primary); color: var(--gk-color-text-inverse); border-radius: var(--gk-radius-md, 6px);">Medium Radius</div>
+        <div style="padding: var(--gk-spacing-lg, 12px); background-color: var(--gk-color-primary); color: var(--gk-color-text-inverse); border-radius: var(--gk-radius-lg, 8px);">Large Radius</div>
+        <div style="padding: var(--gk-spacing-lg, 12px); background-color: var(--gk-color-primary); color: var(--gk-color-text-inverse); border-radius: var(--gk-radius-full, 50%);">Full Radius</div>
+      </div>
+    </div>
+    
+    <div class="test-section">
+      <h2>Typography Demo</h2>
+      <p>These text elements demonstrate typography variables:</p>
+      <div class="size-demo">
+        <div class="size-item">
+          <div style="font-size: var(--gk-font-size-xs, 12px);">Extra Small Text</div>
+          <div style="font-size: var(--gk-font-size-xs, 12px); color: var(--gk-color-text-secondary);">12px</div>
+        </div>
+        <div class="size-item">
+          <div style="font-size: var(--gk-font-size-sm, 14px);">Small Text</div>
+          <div style="font-size: var(--gk-font-size-xs, 12px); color: var(--gk-color-text-secondary);">14px</div>
+        </div>
+        <div class="size-item">
+          <div style="font-size: var(--gk-font-size-md, 16px);">Medium Text</div>
+          <div style="font-size: var(--gk-font-size-xs, 12px); color: var(--gk-color-text-secondary);">16px</div>
+        </div>
+        <div class="size-item">
+          <div style="font-size: var(--gk-font-size-lg, 18px);">Large Text</div>
+          <div style="font-size: var(--gk-font-size-xs, 12px); color: var(--gk-color-text-secondary);">18px</div>
+        </div>
+        <div class="size-item">
+          <div style="font-size: var(--gk-font-size-xl, 20px);">Extra Large Text</div>
+          <div style="font-size: var(--gk-font-size-xs, 12px); color: var(--gk-color-text-secondary);">20px</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="test-section">
+      <h2>Form Components Demo</h2>
+      <p>All form components now use spacing variables:</p>
+      <div class="component-demo">
+        <gk-checkbox>Checkbox with spacing</gk-checkbox>
+        <gk-radio name="test" value="option1">Radio with spacing</gk-radio>
+        <gk-radio name="test" value="option2">Another radio</gk-radio>
+      </div>
+      <div style="margin-top: var(--gk-spacing-lg, 12px);">
+        <gk-textarea placeholder="Textarea with spacing variables" style="width: 100%; max-width: 400px;"></gk-textarea>
+      </div>
+    </div>
+    
+    <div class="test-section">
+      <h2>Success!</h2>
+      <p>If you can see all the components above with proper spacing, colors, and styling, then the spacing variables are working correctly!</p>
+      <p>The design system now uses CSS custom properties for all spacing, making it easy to customize the entire look and feel by overriding these variables.</p>
+    </div>
+
+    <script type="module" src="./dist/gk-ds.es.js"></script>
+  </body>
+</html>

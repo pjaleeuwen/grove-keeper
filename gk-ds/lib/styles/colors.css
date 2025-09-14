@@ -1,0 +1,137 @@
+/* Grove Keeper Design System - Design Tokens */
+
+:root {
+  /* Primary Colors */
+  --gk-color-primary: #4a7c59;
+  --gk-color-primary-hover: #3d6549;
+  --gk-color-primary-light: rgba(74, 124, 89, 0.1);
+  
+  /* Accent Colors */
+  --gk-color-accent: #a8d5ba; /* Mint green accent */
+  --gk-color-accent-light: rgba(168, 213, 186, 0.1);
+  
+  /* Neutral Colors */
+  --gk-color-white: #ffffff;
+  --gk-color-gray-50: #f9fafb;
+  --gk-color-gray-100: #f3f4f6;
+  --gk-color-gray-200: #e5e7eb;
+  --gk-color-gray-300: #d1d5db;
+  --gk-color-gray-400: #9ca3af;
+  --gk-color-gray-500: #6b7280;
+  --gk-color-gray-600: #4b5563;
+  --gk-color-gray-700: #374151;
+  --gk-color-gray-800: #1f2937;
+  --gk-color-gray-900: #111827;
+  
+  /* Text Colors */
+  --gk-color-text-primary: #213547;
+  --gk-color-text-secondary: #6b7280;
+  --gk-color-text-disabled: #9ca3af;
+  --gk-color-text-inverse: #ffffff;
+  
+  /* Background Colors */
+  --gk-color-bg-primary: #ffffff;
+  --gk-color-bg-secondary: #f9fafb;
+  --gk-color-bg-disabled: #f9fafb;
+  
+  /* Border Colors */
+  --gk-color-border-default: #e5e7eb;
+  --gk-color-border-focus: #4a7c59;
+  --gk-color-border-disabled: #e5e7eb;
+  --gk-color-border-error: #ef4444;
+  
+  /* State Colors */
+  --gk-color-success: #10b981;
+  --gk-color-warning: #f59e0b;
+  --gk-color-error: #ef4444;
+  --gk-color-info: #3b82f6;
+  
+  /* Shadow Colors */
+  --gk-color-shadow-focus: rgba(74, 124, 89, 0.1);
+  --gk-color-shadow-error: rgba(239, 68, 68, 0.1);
+  
+  /* Component Specific Colors */
+  --gk-color-checkmark: #ffffff;
+  --gk-color-radio-dot: #ffffff;
+  --gk-color-arrow: #6b7280;
+  
+  /* Legacy Color Mappings (for backward compatibility) */
+  --gk-color-legacy-blue: #646cff;
+  --gk-color-legacy-blue-hover: #535bf2;
+  --gk-color-legacy-blue-light: rgba(100, 108, 255, 0.1);
+
+  /* Spacing System */
+  --gk-spacing-xs: 4px;
+  --gk-spacing-sm: 6px;
+  --gk-spacing-md: 8px;
+  --gk-spacing-lg: 12px;
+  --gk-spacing-xl: 16px;
+  --gk-spacing-2xl: 20px;
+  --gk-spacing-3xl: 24px;
+  --gk-spacing-4xl: 28px;
+  --gk-spacing-5xl: 32px;
+  --gk-spacing-6xl: 36px;
+  --gk-spacing-7xl: 40px;
+  --gk-spacing-8xl: 48px;
+  --gk-spacing-9xl: 56px;
+  --gk-spacing-10xl: 64px;
+
+  /* Component Spacing */
+  --gk-spacing-gap-xs: 4px;
+  --gk-spacing-gap-sm: 8px;
+  --gk-spacing-gap-md: 12px;
+  --gk-spacing-gap-lg: 16px;
+  --gk-spacing-gap-xl: 20px;
+
+  /* Border Radius */
+  --gk-radius-sm: 4px;
+  --gk-radius-md: 6px;
+  --gk-radius-lg: 8px;
+  --gk-radius-xl: 12px;
+  --gk-radius-full: 50%;
+
+  /* Component Sizes */
+  --gk-size-xs: 16px;
+  --gk-size-sm: 18px;
+  --gk-size-md: 20px;
+  --gk-size-lg: 24px;
+  --gk-size-xl: 32px;
+
+  /* Min Heights */
+  --gk-height-xs: 28px;
+  --gk-height-sm: 36px;
+  --gk-height-md: 44px;
+  --gk-height-lg: 60px;
+  --gk-height-xl: 80px;
+  --gk-height-2xl: 100px;
+
+  /* Line Heights */
+  --gk-line-height-tight: 1.25;
+  --gk-line-height-normal: 1.5;
+  --gk-line-height-relaxed: 1.75;
+
+  /* Font Sizes */
+  --gk-font-size-xs: 12px;
+  --gk-font-size-sm: 14px;
+  --gk-font-size-md: 16px;
+  --gk-font-size-lg: 18px;
+  --gk-font-size-xl: 20px;
+
+  /* Shadows */
+  --gk-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --gk-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --gk-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --gk-shadow-focus: 0 0 0 3px var(--gk-color-shadow-focus);
+
+  /* Transitions */
+  --gk-transition-fast: 0.15s ease-in-out;
+  --gk-transition-normal: 0.2s ease-in-out;
+  --gk-transition-slow: 0.3s ease-in-out;
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode colors can be added here in the future */
+  }
+}

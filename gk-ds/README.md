@@ -6,6 +6,7 @@ A modern, accessible web component library built with TypeScript and Shadow DOM.
 
 - **🌐 Framework Agnostic**: Works with any framework or vanilla JavaScript
 - **🎨 Modern Design**: Clean, accessible, and responsive components
+- **🎨 CSS Variables**: Fully customizable color system with CSS custom properties
 - **♿ Accessible**: WCAG 2.1 compliant with full keyboard navigation
 - **📱 Responsive**: Mobile-first design with flexible layouts
 - **🔧 TypeScript**: Full type definitions included
@@ -37,6 +38,7 @@ import { GkButton, GkInputText } from 'gk-ds';
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://unpkg.com/gk-ds/dist/gk-ds.css">
   <script type="module" src="https://unpkg.com/gk-ds/dist/gk-ds.es.js"></script>
 </head>
 <body>
@@ -45,6 +47,47 @@ import { GkButton, GkInputText } from 'gk-ds';
 </body>
 </html>
 ```
+
+## 🎨 CSS Variables & Theming
+
+The design system includes a comprehensive set of CSS custom properties that allow you to customize the entire color scheme. All components use these variables with fallback values, ensuring they work even without the CSS file.
+
+### Including Styles
+
+```html
+<!-- Include the CSS file -->
+<link rel="stylesheet" href="node_modules/gk-ds/dist/gk-ds.css">
+```
+
+Or in your CSS:
+
+```css
+@import 'gk-ds/styles';
+```
+
+### Customizing Colors
+
+Override any color variable to customize the design system:
+
+```css
+:root {
+  --gk-color-primary: #your-brand-color;
+  --gk-color-primary-hover: #your-hover-color;
+  --gk-color-accent: #your-accent-color;
+}
+```
+
+### Available Color Variables
+
+- **Primary Colors**: `--gk-color-primary`, `--gk-color-primary-hover`, `--gk-color-primary-light`
+- **Accent Colors**: `--gk-color-accent`, `--gk-color-accent-light`
+- **Neutral Colors**: `--gk-color-gray-50` through `--gk-color-gray-900`
+- **Text Colors**: `--gk-color-text-primary`, `--gk-color-text-secondary`, `--gk-color-text-disabled`
+- **Background Colors**: `--gk-color-bg-primary`, `--gk-color-bg-secondary`, `--gk-color-bg-disabled`
+- **Border Colors**: `--gk-color-border-default`, `--gk-color-border-focus`, `--gk-color-border-error`
+- **State Colors**: `--gk-color-success`, `--gk-color-warning`, `--gk-color-error`, `--gk-color-info`
+
+See the [styles documentation](./lib/styles/README.md) for a complete list of available variables.
 
 ### React Usage
 

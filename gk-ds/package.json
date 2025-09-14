@@ -10,7 +10,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/gk-ds.es.js",
       "require": "./dist/gk-ds.umd.js"
-    }
+    },
+    "./styles": "./dist/gk-ds.css"
   },
   "customElements": "./dist/custom-elements.json",
   "files": [
@@ -18,7 +19,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node scripts/build-css.js",
     "preview": "vite preview",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",

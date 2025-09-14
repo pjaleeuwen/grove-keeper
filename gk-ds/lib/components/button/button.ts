@@ -7,13 +7,13 @@ const styles = `
 
   button {
     font-family: inherit;
-    font-size: 14px;
+    font-size: var(--gk-font-size-sm, 14px);
     font-weight: 500;
-    line-height: 1.5;
+    line-height: var(--gk-line-height-normal, 1.5);
     border: 1px solid transparent;
-    border-radius: 6px;
+    border-radius: var(--gk-radius-md, 6px);
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all var(--gk-transition-normal, 0.2s ease-in-out);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@ const styles = `
   }
 
   button:focus-visible {
-    outline: 2px solid #646cff;
+    outline: 2px solid var(--gk-color-primary, #4a7c59);
     outline-offset: 2px;
   }
 
@@ -35,45 +35,45 @@ const styles = `
 
   /* Variants */
   button[variant="primary"] {
-    background-color: #646cff;
-    color: white;
-    border-color: #646cff;
+    background-color: var(--gk-color-primary, #4a7c59);
+    color: var(--gk-color-text-inverse, white);
+    border-color: var(--gk-color-primary, #4a7c59);
   }
 
   button[variant="primary"]:hover:not(:disabled) {
-    background-color: #535bf2;
-    border-color: #535bf2;
+    background-color: var(--gk-color-primary-hover, #3d6549);
+    border-color: var(--gk-color-primary-hover, #3d6549);
   }
 
   button[variant="secondary"] {
     background-color: transparent;
-    color: #646cff;
-    border-color: #646cff;
+    color: var(--gk-color-primary, #4a7c59);
+    border-color: var(--gk-color-primary, #4a7c59);
   }
 
   button[variant="secondary"]:hover:not(:disabled) {
-    background-color: #646cff;
-    color: white;
+    background-color: var(--gk-color-primary, #4a7c59);
+    color: var(--gk-color-text-inverse, white);
   }
 
 
   /* Sizes */
   button[size="small"] {
-    padding: 6px 12px;
-    font-size: 12px;
-    min-height: 28px;
+    padding: var(--gk-spacing-sm, 6px) var(--gk-spacing-lg, 12px);
+    font-size: var(--gk-font-size-xs, 12px);
+    min-height: var(--gk-height-xs, 28px);
   }
 
   button[size="medium"] {
-    padding: 8px 16px;
-    font-size: 14px;
-    min-height: 36px;
+    padding: var(--gk-spacing-md, 8px) var(--gk-spacing-xl, 16px);
+    font-size: var(--gk-font-size-sm, 14px);
+    min-height: var(--gk-height-sm, 36px);
   }
 
   button[size="large"] {
-    padding: 12px 24px;
-    font-size: 16px;
-    min-height: 44px;
+    padding: var(--gk-spacing-lg, 12px) var(--gk-spacing-3xl, 24px);
+    font-size: var(--gk-font-size-md, 16px);
+    min-height: var(--gk-height-md, 44px);
   }
 
 `;

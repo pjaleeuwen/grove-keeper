@@ -24,6 +24,12 @@ export default defineConfig({
       external: [],
       output: {
         globals: {},
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
+            return 'gk-ds.css';
+          }
+          return assetInfo.name || 'asset';
+        },
       },
     },
   },

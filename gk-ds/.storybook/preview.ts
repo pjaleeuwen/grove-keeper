@@ -7,6 +7,9 @@ import customElementsManifest from 'virtual:vite-plugin-cem/custom-elements-mani
 // Import all components to register them
 import '../lib';
 
+// Import the CSS variables
+import '../lib/styles/colors.css';
+
 // Set the custom elements manifest for Storybook
 setCustomElementsManifest(customElementsManifest);
 
